@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ethers } from "ethers";
+import { Navigate } from 'react-router-dom';
 
 
 const Home = () => {
@@ -22,40 +23,48 @@ const Home = () => {
         };
     };
 
-    return (
-        <>
-            <div className="section">
-                <button className="button" onClick={connect}>Connecter Metamask</button>
-            </div>
-            {state.error && <div className="section">
-                <div className="box">
-                    <p className="alertMsg">{state.error}</p>
+    if (state.providerData && state.providerData.networkName !== 'sepolia'){
+        return (
+            <Navigate replace to="/Error" />
+        )
+        
+    }else {
+        return (
+            <>
+                <div className="section">
+                    <button className="button" onClick={connect}>Connecter Metamask</button>
                 </div>
-            </div>}
-            {state.provider && 
-                <>
-                    <div className="section">
-                        <div className="box small">
-                            <h3 className="subtitle">Nom du réseau :</h3>
-                            <p className="alertMsg">{state.providerData.networkName}</p>
-                        </div>
-                        <div className="box small">
-                            <h3 className="subtitle">Dernier block :</h3>
-                            <p className="alertMsg">{state.providerData.lastBlock}</p>
-                        </div>
-                        <div className="box small">
-                            <h3 className="subtitle">Chain id :</h3>
-                            <p className="alertMsg">{state.providerData.chainId}</p>
-                        </div>
-                        <div className="box small">
-                            <h3 className="subtitle">Wallet :</h3>
-                            <p className="alertMsg">{state.providerData.signerAddress}</p>
-                        </div>
+                {state.error && <div className="section">
+                    <div className="box">
+                        <p className="alertMsg">{state.error}</p>
                     </div>
-                </>
-            }
-        </>
-    );
+                </div>}
+                {state.providerData && 
+                    <>
+                        <div className="section">
+                            <div className="box small">
+                                <h3 className="subtitle">Nom du réseau :</h3>
+                                <p className="alertMsg">{state.providerData.networkName}</p>
+                            </div>
+                            <div className="box small">
+                                <h3 className="subtitle">Dernier block :</h3>
+                                <p className="alertMsg">{state.providerData.lastBlock}</p>
+                            </div>
+                            <div className="box small">
+                                <h3 className="subtitle">Chain id :</h3>
+                                <p className="alertMsg">{state.providerData.chainId}</p>
+                            </div>
+                            <div className="box small">
+                                <h3 className="subtitle">Wallet :</h3>
+                                <p className="alertMsg">{state.providerData.signerAddress}</p>
+                            </div>
+                        </div>
+                    </>
+                }
+            </>
+        );
+    }
+    
 };
 
 export default Home;

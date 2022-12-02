@@ -1,12 +1,12 @@
+import AppRoutes from './routes';
 import Nav from "./component/nav/Nav";
-import Home from "./component/pages/chain-info";
 
 const App = () => {
 
     return (
         <>
             <Nav />
-            <Home />
+            <AppRoutes />
         </>
     );
 };
