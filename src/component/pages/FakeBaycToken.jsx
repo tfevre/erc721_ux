@@ -22,7 +22,7 @@ const FakeBaycToken = () => {
             .then(data => {
                imageURI = (data.image).replace('ipfs://', 'https://ipfs.io/ipfs/');
                imageName = data.name;
-               imageName = data.description;
+               imageDescription = data.description;
                setState({signer: signer, imageURI: imageURI, name: imageName, description: imageDescription,  contract: ct});
             })
             .catch(error => {

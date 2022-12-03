@@ -17,6 +17,15 @@ body {
     width: 100%;
 }
 
+.nav:hover{
+    background-color: #142e85;
+    color:#ffffff;
+}
+
+.nav h1{
+    cursor: pointer;
+}
+
 .nav > img {
     width: 100%;
     max-width: 300px;

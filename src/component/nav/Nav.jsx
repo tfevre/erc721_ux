@@ -1,9 +1,11 @@
+import { useNavigate } from 'react-router-dom';
 const Nav = () => {
+    const navigate = useNavigate();
 
     return (
         <>
             <nav className="nav">
-                <h1>THOMAS FEVRE | A4 ESILV FINTECH</h1>
+                <h1 onClick={() => navigate("/")}>THOMAS FEVRE | A4 ESILV FINTECH</h1>
             </nav>
         </>
     );
