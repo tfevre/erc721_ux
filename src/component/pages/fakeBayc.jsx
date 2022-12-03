@@ -25,7 +25,7 @@ const ChainInfo = () => {
 
     return (
         <>  
-            <h1 className="pageTitle">Chain Info</h1>
+            <h1 className="pageTitle">Fake Bayc</h1>
             {!state.providerData &&
             <div className="section">
                 <button className="button" onClick={connect}>Connecter Metamask</button>

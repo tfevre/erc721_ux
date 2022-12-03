@@ -22,9 +22,21 @@ body {
     max-width: 300px;
 }
 
+.pageTitle{
+    text-align: center;
+}
+
 .section {
     padding: 20px 0;
     display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.MenuSection{
+    padding: 20px 0;
+    display: grid;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
