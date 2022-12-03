@@ -117,3 +117,7 @@ body {
     margin: 10px 0;
     max-width: 400px;
 }
+
+.ipfsImage{
+    width: inherit;
+}
