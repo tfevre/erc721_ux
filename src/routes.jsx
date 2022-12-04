@@ -6,6 +6,7 @@ import FakeBayc from './component/pages/FakeBayc';
 import FakeBaycToken from './component/pages/FakeBaycToken';
 import FakeNefturians from './component/pages/FakeNefturians';
 import FakeNefturiansWallet from './component/pages/FakeNefturiansWallet';
+import FakeMeebits from './component/pages/FakeMeebits';
 import Error from "./component/pages/Error";
 
 const AppRoutes = () => {
@@ -17,6 +18,7 @@ const AppRoutes = () => {
             <Route path='/fakeBayc/:token_id' element={<FakeBaycToken />} />
             <Route path='/fakeNefturians' element={<FakeNefturians />} />
             <Route path='/fakeNefturians/:address' element={<FakeNefturiansWallet />} />
+            <Route path='/fakeMeebits' element={<FakeMeebits />} />
             <Route path='/Error' element={<Error />} />
         </Routes>
     )
