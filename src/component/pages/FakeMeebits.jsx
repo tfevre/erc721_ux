@@ -1,13 +1,12 @@
 import { ethers } from "ethers";
-import { FakeMeebitsABI } from '../../smartContract/smartContract';
+import { FakeMeebitsABI, FakeMeebitsClaimerABI } from '../../smartContract/smartContract';
 import { useState, useEffect  } from "react";
-import { useNavigate } from 'react-router-dom';
-// import { Select } from '../tools/select';
+
+import signatures from '../../signatures/output-sig.json';
 
 const FakeMeebits = () => {
     const [state, setState] = useState({});
     const [statuss, setStatus] = useState("");
-    const navigate = useNavigate();
 
 
     const contractData = async () => {
@@ -29,6 +28,7 @@ const FakeMeebits = () => {
         };
     }
 
+    // Return a list of non used ids
     const getNewID = async (ct, totalSupply) => {
         let unusedIDList = [];
         let usedIDList = [];
@@ -59,12 +59,15 @@ const FakeMeebits = () => {
 
     const submit = async (e) => {
         e.preventDefault();
-        console.log(statuss)
-        // if (await state.signer){
-        //     await state.contract.claimAToken();
-        // }else{
-        //     contractData();
-        // }
+        let id = document.getElementById('selectID').value;
+        let sig = signatures[id].signature;
+        if (await state.signer){
+            const fakeMeebitsClaimerAddress="0x5341e225Ab4D29B838a813E380c28b0eFD6FBa55";
+            const ct = new ethers.Contract(fakeMeebitsClaimerAddress, FakeMeebitsClaimerABI.abi, state.signer);
+            console.log(await ct.claimAToken(id, sig));
+        }else{
+            contractData();
+        }
     };
 
     return (
@@ -89,7 +92,7 @@ const FakeMeebits = () => {
             {state.ids && <div className="section">
                 <form className="box" onSubmit={submit}>
                     <h3 className="subtitle">Choisissez un id pour votre nouvel NFT :</h3>
-                    <select className="form-control" value={statuss} onChange={(e) => setStatus(e.target.value)}>
+                    <select className="form-control" value={statuss} onChange={(e) => setStatus(e.target.value)} id='selectID'>
                         {state.ids.map((data,index) =>
                             <option value={data} key={index}>{data}</option>
                         )}
