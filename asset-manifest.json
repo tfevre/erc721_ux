@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/erc721_ux/static/css/main.2173bb05.css",
+    "main.js": "/erc721_ux/static/js/main.2f863e97.js",
+    "index.html": "/erc721_ux/index.html",
+    "main.2173bb05.css.map": "/erc721_ux/static/css/main.2173bb05.css.map",
+    "main.2f863e97.js.map": "/erc721_ux/static/js/main.2f863e97.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2173bb05.css",
+    "static/js/main.2f863e97.js"
+  ]
+}
