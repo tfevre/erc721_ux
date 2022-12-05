@@ -13,6 +13,7 @@ const Menu = () => {
             <button className="button" onClick={() => navigate("/erc721_ux/fakeNefturians")}>fakeNefturians</button>
             <button className="button" onClick={() => navigate("/erc721_ux/fakeMeebits")}>fakeMeebits</button>
         </div>
+        <div className="MenuSection"><p>(You can click on my name at the top of every page to go back here)</p></div>
         </>
         
     )
