@@ -5,7 +5,7 @@ const Error = () => {
 
     const navigateToHome = () => {
         // navigate to /
-        navigate('/');
+        navigate('/erc721_ux/');
     };
 
     return (

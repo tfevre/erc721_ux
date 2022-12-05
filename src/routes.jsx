@@ -12,14 +12,14 @@ import Error from "./component/pages/Error";
 const AppRoutes = () => {
     return (
         <Routes>
-            <Route path='/' element={<Menu />} />
-            <Route path='/ChainInfo' element={<ChainInfo />} />
-            <Route path='/fakeBayc' element={<FakeBayc />} />
-            <Route path='/fakeBayc/:token_id' element={<FakeBaycToken />} />
-            <Route path='/fakeNefturians' element={<FakeNefturians />} />
-            <Route path='/fakeNefturians/:address' element={<FakeNefturiansWallet />} />
-            <Route path='/fakeMeebits' element={<FakeMeebits />} />
-            <Route path='/Error' element={<Error />} />
+            <Route path='/erc721_ux/' element={<Menu />} />
+            <Route path='/erc721_ux/ChainInfo' element={<ChainInfo />} />
+            <Route path='/erc721_ux/fakeBayc' element={<FakeBayc />} />
+            <Route path='/erc721_ux/fakeBayc/:token_id' element={<FakeBaycToken />} />
+            <Route path='/erc721_ux/fakeNefturians' element={<FakeNefturians />} />
+            <Route path='/erc721_ux/fakeNefturians/:address' element={<FakeNefturiansWallet />} />
+            <Route path='/erc721_ux/fakeMeebits' element={<FakeMeebits />} />
+            <Route path='/erc721_ux/Error' element={<Error />} />
         </Routes>
     )
 };

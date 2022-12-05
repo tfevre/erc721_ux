@@ -99,7 +99,7 @@ const FakeNefturiansWallet = () => {
                 <div className="box small">
                     <p>Sorry, there was an error ;)</p>
                 </div>
-                <button className="button" onClick={() => navigate("/")}>Menu</button>
+                <button className="button" onClick={() => navigate("/erc721_ux/")}>Menu</button>
             </div>}
         </>
     )

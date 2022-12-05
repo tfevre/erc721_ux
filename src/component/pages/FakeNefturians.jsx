@@ -42,7 +42,7 @@ const FakeNefturians = () => {
         e.preventDefault();
         const target = e.currentTarget;
         const userAddress = target.userAddress.value === '' ? await state.signer.getAddress() : target.userAddress.value;
-        navigate("/FakeNefturians/"+userAddress);
+        navigate("/erc721_ux/FakeNefturians/"+userAddress);
     };
 
     return (

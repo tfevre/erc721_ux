@@ -41,7 +41,7 @@ const FakeBayc = () => {
         e.preventDefault();
         const target = e.currentTarget;
         const tokenID = target.tokenID.value;
-        navigate("/FakeBayc/"+tokenID);
+        navigate("/erc721_ux/FakeBayc/"+tokenID);
     };
 
     return (

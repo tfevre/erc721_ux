@@ -62,7 +62,7 @@ const FakeBaycToken = () => {
                 <div className="box small">
                     <p>Sorry, the given token ID does not exists ;)</p>
                 </div>
-                <button className="button" onClick={() => navigate("/")}>Menu</button>
+                <button className="button" onClick={() => navigate("/erc721_ux/")}>Menu</button>
             </div>}
         </>
     )
