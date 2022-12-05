@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes, DefaultRoute, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Menu from './component/pages/menu';
 import ChainInfo from "./component/pages/chain-info";
 import FakeBayc from './component/pages/FakeBayc';
@@ -12,7 +12,6 @@ import Error from "./component/pages/Error";
 const AppRoutes = () => {
     return (
         <Routes>
-            <DefaultRoute handler={<Menu />} />
             <Route path='/erc721_ux/' element={<Menu />} />
             <Route path='/' element={<Menu />} />
             <Route path="*" element={<Navigate to="/" />} />
