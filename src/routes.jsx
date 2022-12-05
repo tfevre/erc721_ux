@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes, DefaultRoute } from "react-router-dom";
+import { Route, Routes, DefaultRoute, Navigate } from "react-router-dom";
 import Menu from './component/pages/menu';
 import ChainInfo from "./component/pages/chain-info";
 import FakeBayc from './component/pages/FakeBayc';
@@ -16,13 +16,13 @@ const AppRoutes = () => {
             <Route path='/erc721_ux/' element={<Menu />} />
             <Route path='/' element={<Menu />} />
             <Route path="*" element={<Navigate to="/" />} />
-            <Route path='/ChainInfo' element={<ChainInfo />} />
-            <Route path='/fakeBayc' element={<FakeBayc />} />
-            <Route path='/fakeBayc/:token_id' element={<FakeBaycToken />} />
-            <Route path='/fakeNefturians' element={<FakeNefturians />} />
-            <Route path='/fakeNefturians/:address' element={<FakeNefturiansWallet />} />
-            <Route path='/fakeMeebits' element={<FakeMeebits />} />
-            <Route path='/Error' element={<Error />} />
+            <Route path='/erc721_ux/ChainInfo' element={<ChainInfo />} />
+            <Route path='/erc721_ux/fakeBayc' element={<FakeBayc />} />
+            <Route path='/erc721_ux/fakeBayc/:token_id' element={<FakeBaycToken />} />
+            <Route path='/erc721_ux/fakeNefturians' element={<FakeNefturians />} />
+            <Route path='/erc721_ux/fakeNefturians/:address' element={<FakeNefturiansWallet />} />
+            <Route path='/erc721_ux/fakeMeebits' element={<FakeMeebits />} />
+            <Route path='/erc721_ux/Error' element={<Error />} />
         </Routes>
     )
 };

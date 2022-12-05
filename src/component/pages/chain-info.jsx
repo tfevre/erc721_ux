@@ -30,7 +30,7 @@ const ChainInfo = () => {
             <div className="section">
                 <button className="button" onClick={connect}>Connecter Metamask</button>
             </div>}
-            {state.providerData && state.providerData.networkName !== 'sepolia' && <Navigate replace to="/Error" />}
+            {state.providerData && state.providerData.networkName !== 'sepolia' && <Navigate replace to="/erc721_ux/Error" />}
             {state.error && <div className="section">
                 <div className="box">
                     <p className="alertMsg">{state.error}</p>
